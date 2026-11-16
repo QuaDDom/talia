@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TALIA · Pasión x la Bici · Resistencia, Chaco</title>
+<meta name="description" content="Bicicletería en Resistencia, Chaco. Bicis Specialized, taller oficial Shimano, servicio oficial RockShox y el Club TALIA. Liniers 587.">
+<meta name="theme-color" content="#0d2b2f">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=12">
+</head>
+<body>
+
+<div class="intro" aria-hidden="true">
+  <img src="assets/talia-blanco.svg" alt="" width="220">
+  <span class="intro-line"></span>
+</div>
+
+<p class="demo-bar">Demo de propuesta para TALIA · Diseño de <a href="https://mateoquadrelli.com" target="_blank" rel="noopener">Mateo Quadrelli</a></p>
+
+<header class="header">
+  <a class="brand" href="#inicio" aria-label="TALIA, inicio"><img src="assets/talia-blanco.svg" alt="TALIA" width="104" height="22"></a>
+  <nav class="nav" id="nav" aria-label="Secciones">
+    <a href="#bicis"><small>01</small>Bicis</a>
+    <a href="#taller"><small>02</small>Taller</a>
+    <a href="#historia"><small>03</small>Historia</a>
+    <a href="#club"><small>04</small>Club</a>
+    <a href="#local"><small>05</small>El local</a>
+  </nav>
+  <a class="btn btn-signal header-cta" href="https://wa.me/5493731538155" target="_blank" rel="noopener" data-wa="Hola, te escribo desde la web."><span>WhatsApp</span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav"><span></span><span></span><b>Menú</b></button>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-copy">
+      <p class="eyebrow" data-reveal>Resistencia, Chaco <i></i> Desde 2016</p>
+      <h1 class="split" aria-label="Pasión x la bici.">
+        <span class="line"><span>Pasión</span></span>
+        <span class="line"><span><em>x</em> la bici.</span></span>
+      </h1>
+      <p class="hero-lead" data-reveal>Bicis Specialized, taller oficial Shimano, servicio oficial RockShox y una dueña que corrió en la selección argentina.</p>
+      <div class="hero-actions" data-reveal>
+        <a class="btn btn-signal" href="#bicis"><span>Ver bicis</span></a>
+        <a class="btn btn-line" href="#taller"><span>Agendar service</span></a>
+      </div>
+    </div>
+    <figure class="hero-bike">
+      <!-- The 3D bike (assets/bike3d.js) draws over this; the photo stays if the browser has no WebGL. -->
+      <img src="assets/fotos/chisel.jpg" alt="Specialized Chisel, doble suspensión" width="512" height="520">
+      <figcaption><span>Armada en nuestro taller</span><b class="drag-hint">Arrastrá para girarla</b></figcaption>
+    </figure>
+    <dl class="hero-data" data-reveal>
+      <div><dt>Años rodando</dt><dd>10</dd></div>
+      <div><dt>Google · 77 reseñas</dt><dd>4,9</dd></div>
+      <div><dt>Taller</dt><dd>Oficial</dd></div>
+    </dl>
+  </section>
+
+  <!-- Brands -->
+  <div class="ticker" aria-label="Marcas y servicios oficiales">
+    <div class="ticker-track">
+      <span>Distribuidor oficial Specialized</span><i></i>
+      <span>Taller oficial Shimano</span><i></i>
+      <span>Servicio oficial RockShox</span><i></i>
+      <span>Distribuidor oficial SRAM</span><i></i>
+      <span>10 años rodando juntos</span><i></i>
+    </div>
+  </div>
+
+  <!-- 01 Bikes -->
+  <section class="bikes" id="bicis">
+    <header class="section-head">
+      <p class="stage" data-reveal><b>01</b> Bicis</p>
+      <h2 class="split"><span class="line"><span>Elegí tu</span></span><span class="line"><span>próxima bici.</span></span></h2>
+      <p class="section-lead" data-reveal>Bicis importadas y nacionales, indumentaria y accesorios. Elegí una y te pasamos precio, cuotas y disponibilidad por WhatsApp.</p>
+    </header>
+
+    <div class="filters" role="group" aria-label="Filtrar bicis" data-reveal>
+      <button type="button" class="chip" data-filter="todas" aria-pressed="true">Todas</button>
+      <button type="button" class="chip" data-filter="montana" aria-pressed="false">Montaña</button>
+      <button type="button" class="chip" data-filter="ninos" aria-pressed="false">Niños</button>
+    </div>
+
+    <div class="bike-grid" id="bike-grid"></div>
+
+    <!-- Size finder -->
+    <div class="sizer" id="talle">
+      <div class="sizer-copy" data-reveal>
+        <p class="stage"><b>01.1</b> Tu talle</p>
+        <h3>¿Qué talle de cuadro<br>te queda?</h3>
+        <p>Mové la barra hasta tu altura y te mostramos el talle orientativo para una bici de montaña. En el local te la medimos y la ajustamos a vos.</p>
+      </div>
+      <div class="sizer-tool" data-reveal>
+        <div class="sizer-read">
+          <div class="plate"><small>Talle</small><b id="s-size">M</b></div>
+          <div class="sizer-height"><small>Tu altura</small><output id="s-out" for="s-range">1,74 m</output></div>
+        </div>
+        <label class="range">
+          <span class="sr-only">Tu altura en centímetros</span>
+          <input id="s-range" type="range" min="145" max="200" step="1" value="174">
+        </label>
+        <ol class="size-scale" id="s-scale" aria-hidden="true"></ol>
+        <a class="btn btn-ink" id="s-enviar" href="https://wa.me/5493731538155" target="_blank" rel="noopener"><span>Consultar mi talle</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Workshop -->
+  <section class="workshop" id="taller">
+    <div class="workshop-head">
+      <p class="stage" data-reveal><b>02</b> Taller</p>
+      <h2 class="split"><span class="line"><span>Tu bici,</span></span><span class="line"><span>en manos</span></span><span class="line"><span><em>oficiales.</em></span></span></h2>
+    </div>
+
+    <div class="workshop-grid">
+      <figure class="frame workshop-photo" data-reveal="img">
+        <img src="assets/fotos/rockshox.jpg" alt="Horquilla y tija RockShox en el taller" width="378" height="480" data-parallax="0.06" loading="lazy">
+      </figure>
+
+      <div class="workshop-copy">
+        <ul class="badges">
+          <li data-reveal><b>Shimano</b><span>Taller oficial · Shimano Service Center</span></li>
+          <li data-reveal><b>RockShox</b><span>Servicio de mantenimiento oficial de suspensiones</span></li>
+          <li data-reveal><b>Specialized · SRAM</b><span>Distribuidor oficial</span></li>
+        </ul>
+        <p class="workshop-text" data-reveal>Detrás de cada service está Mauro, nuestro mecánico, que se capacita con Shimano para llevar el taller a otro nivel. Porque una bici bien mantenida no es suerte: es conocimiento y experiencia.</p>
+        <blockquote class="mini-quote" data-reveal>
+          <p>“Dejan la bicicleta super afinada.”</p>
+          <cite>Reseña en Google</cite>
+        </blockquote>
+      </div>
+
+      <!-- Booking -->
+      <form class="booking" id="booking" data-reveal onsubmit="return false">
+        <p class="booking-title">Agendá tu service</p>
+        <fieldset>
+          <legend>Servicio</legend>
+          <div class="chips" id="b-servicio"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Tu bici</legend>
+          <div class="chips" id="b-bici"></div>
+        </fieldset>
+        <fieldset>
+          <legend>¿Qué día te queda bien?</legend>
+          <div class="chips days" id="b-dia"></div>
+          <p class="booking-hours" id="b-horario"></p>
+        </fieldset>
+        <div class="message">
+          <small>Tu mensaje</small>
+          <p id="b-preview"></p>
+        </div>
+        <a class="btn btn-signal btn-wide" id="b-enviar" href="https://wa.me/5493731538155" target="_blank" rel="noopener"><span>Pedir turno por WhatsApp</span></a>
+      </form>
+    </div>
+  </section>
+
+  <!-- 03 Story -->
+  <section class="story" id="historia">
+    <div class="story-grid">
+      <div class="story-copy">
+        <p class="stage" data-reveal><b>03</b> Historia</p>
+        <h2 class="split"><span class="line"><span>De la selección</span></span><span class="line"><span>argentina a</span></span><span class="line"><span>Liniers 587.</span></span></h2>
+        <div class="story-text" data-reveal>
+          <p>Talia Aguirre es de Las Breñas y corrió a nivel local, nacional e internacional: integró la selección argentina y compitió en Europa.</p>
+          <p>En 2016 volcó toda esa experiencia en un negocio propio y eligió Resistencia, la capital de su provincia. El primer paso fue vender su propia bici. Hoy TALIA es taller oficial, distribuidor de las mejores marcas y un lugar donde se juntan los que pedalean.</p>
+        </div>
+      </div>
+      <figure class="frame story-photo" data-reveal="img">
+        <img src="assets/fotos/local.jpg" alt="Frente del local de TALIA en Liniers 587" width="1400" height="1128" data-parallax="0.08" loading="lazy">
+        <figcaption>Liniers 587, Resistencia</figcaption>
+      </figure>
+    </div>
+
+    <ol class="timeline">
+      <li data-reveal><b>2016</b><span>Abre TALIA en Resistencia.</span></li>
+      <li data-reveal><b>2021</b><span>La Ciudad y la Cámara de Comercio reconocen a Talia en el Mes de la Mujer.</span></li>
+      <li data-reveal><b>2026</b><span>Servicio oficial RockShox. Diez años rodando juntos.</span></li>
+    </ol>
+
+    <blockquote class="big-quote" data-reveal>
+      <p>“La dueña es muy divina, además de ser la mejor ciclista.”</p>
+      <cite>Reseña en Google</cite>
+    </blockquote>
+  </section>
+
+  <!-- 04 Club -->
+  <section class="club" id="club">
+    <div class="club-marquee" aria-hidden="true">
+      <div class="club-track"><span>Club TALIA</span><span>Club TALIA</span><span>Club TALIA</span><span>Club TALIA</span></div>
+    </div>
+    <div class="club-grid">
+      <p class="stage" data-reveal><b>04</b> Club</p>
+      <h2 class="split"><span class="line"><span>Salimos a</span></span><span class="line"><span>rodar juntos.</span></span></h2>
+      <div class="club-copy" data-reveal>
+        <p>El Club TALIA arma salidas en grupo para que no pedalees solo. Escribinos y te contamos cuándo es la próxima y por dónde vamos.</p>
+        <a class="btn btn-ink" href="https://wa.me/5493731538155" target="_blank" rel="noopener" data-wa="Hola, quiero sumarme a las salidas del Club TALIA. ¿Cuándo es la próxima?"><span>Quiero sumarme</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop gallery: scrolls sideways on desktop -->
+  <section class="gallery" id="galeria" aria-label="Fotos del local">
+    <div class="gallery-sticky">
+      <div class="gallery-head">
+        <p class="stage">Adentro del local</p>
+        <h2>Pasá a verlas<br>en persona.</h2>
+      </div>
+      <div class="gallery-track" id="gallery-track">
+        <figure><img src="assets/fotos/interior-1.jpg" alt="Bicis colgadas en el local" width="1100" height="1466" loading="lazy"></figure>
+        <figure class="wide"><img src="assets/fotos/cascos.jpg" alt="Cascos Specialized en exhibición" width="1200" height="798" loading="lazy"></figure>
+        <figure><img src="assets/fotos/interior-2.jpg" alt="Bicis, indumentaria y accesorios en el salón" width="1100" height="1466" loading="lazy"></figure>
+        <figure class="wide"><img src="assets/fotos/bici-roja.jpg" alt="Bici de montaña Specialized roja" width="1200" height="900" loading="lazy"></figure>
+        <figure class="wide"><img src="assets/fotos/repuestos.jpg" alt="Pared de repuestos Shimano" width="1200" height="708" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="resenas">
+    <div class="score" data-reveal>
+      <b>4,9</b>
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <p><span data-count="77">77</span> reseñas en Google</p>
+    </div>
+    <div class="quotes">
+      <blockquote data-reveal><p>“Buena variedad de bicicletas, accesorios, y por sobre todo servicio de mantenimiento de calidad.”</p><cite>Viktor H.</cite></blockquote>
+      <blockquote data-reveal><p>“Leí que tenía muy buenas reseñas, pero realmente se quedan cortos.”</p><cite>Reseña en Google</cite></blockquote>
+      <blockquote data-reveal><p>“Excelente atención. Alto nivel profesional.”</p><cite>Ricardo G.</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- 05 Visit -->
+  <section class="visit" id="local">
+    <div class="visit-copy">
+      <p class="stage" data-reveal><b>05</b> Visitanos</p>
+      <h2 class="split"><span class="line"><span>Liniers 587,</span></span><span class="line"><span>Resistencia.</span></span></h2>
+      <div class="open-now" id="open-now" data-reveal><i></i><span>Horario de atención</span></div>
+      <ul class="hours" data-reveal>
+        <li data-days="1,2,3,4,5"><span>Lunes a viernes</span><b>16:30 — 20:30</b></li>
+        <li data-days="6"><span>Sábado</span><b>9:00 — 13:00</b></li>
+        <li data-days="0"><span>Domingo</span><b>Cerrado</b></li>
+      </ul>
+      <ul class="contact" data-reveal>
+        <li><small>WhatsApp</small><a href="https://wa.me/5493731538155" target="_blank" rel="noopener" data-wa="Hola, te escribo desde la web.">3731 53-8155</a></li>
+        <li><small>Instagram</small><a href="https://www.instagram.com/talia.pasion.x.la.bici/" target="_blank" rel="noopener">@talia.pasion.x.la.bici</a></li>
+        <li><small>Acceso</small><span>Entrada y estacionamiento accesibles</span></li>
+      </ul>
+      <div class="visit-actions" data-reveal>
+        <a class="btn btn-signal" href="https://www.google.com/maps?cid=12253153963844573130" target="_blank" rel="noopener"><span>Cómo llegar</span></a>
+        <a class="btn btn-line" href="https://wa.me/5493731538155" target="_blank" rel="noopener" data-wa="Hola, te escribo desde la web."><span>Escribinos</span></a>
+      </div>
+    </div>
+    <div class="map" data-reveal="img">
+      <iframe title="Mapa: TALIA Pasión x la Bici, Liniers 587, Resistencia" src="https://www.google.com/maps?q=TALIA+PASI%C3%93N+X+LA+BICI,+Liniers+587,+Resistencia,+Chaco&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <img class="footer-logo" src="assets/logo-blanco.svg" alt="TALIA Pasión x la Bici" width="600" height="180" loading="lazy">
+  <div class="footer-row">
+    <p>Liniers 587, Resistencia, Chaco · 3731 53-8155</p>
+    <p>© 2026 TALIA · Diseño y desarrollo: <a href="https://mateoquadrelli.com" target="_blank" rel="noopener">Mateo Quadrelli</a></p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5493731538155" target="_blank" rel="noopener" data-wa="Hola, te escribo desde la web." aria-label="Escribinos por WhatsApp">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.41 9.41 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43zm8.03-17.47A11.3 11.3 0 0 0 12.04.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.6 23.6l6-1.57a11.34 11.34 0 0 0 5.43 1.38h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.03-1.18-5.89-3.32-8.03z"/></svg>
+</a>
+
+<script type="importmap">{ "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }</script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/app.js?v=5"></script>
+<script type="module" src="assets/bike3d.js?v=3"></script>
+</body>
+</html>

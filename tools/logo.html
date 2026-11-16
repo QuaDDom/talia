@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<title>Logo reconstruido</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* The rebuilt logo and its variants on one sheet, for the images sent to the client.
+     Left: the logo in white on black, like the shop front. Right: what it is and the other versions. */
+  html, body { margin: 0; height: 100%; }
+  body { display: grid; grid-template-columns: 1fr 1fr; font-family: "Archivo", Arial, sans-serif; }
+  .dark { display: grid; place-items: center; background: #0d2b2f; }
+  .dark img { width: 72%; }
+  .light { display: grid; place-items: center; align-content: center; gap: 34px; padding: 70px; background: #ece8df; color: #0d2b2f; }
+  h1 { margin: 0; font: 800 64px/0.92 "Archivo", sans-serif; font-variation-settings: "wdth" 70; text-transform: uppercase; text-align: center; }
+  h1 em { font-style: normal; color: #1e7a56; }
+  p { margin: 0; max-width: 36ch; font-size: 19px; line-height: 1.6; text-align: center; color: #4a4a47; }
+  .row { width: 340px; }
+  .icons { display: flex; align-items: center; gap: 26px; }
+  small { font: 500 12px/1 "JetBrains Mono", monospace; letter-spacing: 0.16em; text-transform: uppercase; color: #6b6b67; }
+</style>
+</head>
+<body>
+  <div class="dark"><img src="../assets/logo-blanco.svg" alt="Logo de TALIA en blanco"></div>
+  <div class="light">
+    <h1>Tu logo, <em>en alta calidad.</em></h1>
+    <p>Redibujado en vector a partir del cartel del local: nítido en la web, en la ropa del club y en un cartel grande. Con versión en negro y un ícono para el navegador.</p>
+    <img class="row" src="../assets/logo-negro.svg" alt="Versión en negro">
+    <div class="icons"><img src="../assets/badge.svg" alt="" width="120"><img src="../assets/favicon.svg" alt="" width="64"><img src="../assets/favicon.svg" alt="" width="34"><img src="../assets/favicon.svg" alt="" width="20"></div>
+    <small>Propuesta de diseño · Mateo Quadrelli</small>
+  </div>
+</body>
+</html>

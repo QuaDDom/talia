@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<title>Captura en computadora</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* The page inside a browser window, on the same light ground as the phone images.
+     The iframe renders at a real desktop width (1440 × 900) and is scaled down to fit. */
+  html, body { margin: 0; height: 100%; }
+  body {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 34px;
+    background: radial-gradient(110% 70% at 50% 35%, #efebe3 0%, #d9d4c8 100%);
+    font-family: "JetBrains Mono", monospace;
+    color: #0a0a0b;
+  }
+  h1 { margin: 0; font: 800 66px/0.92 "Archivo", sans-serif; font-variation-settings: "wdth" 70; text-transform: uppercase; text-align: center; }
+  h1 em { font-style: normal; color: #1e7a56; }
+  .window {
+    width: 1296px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #0a0a0b;
+    box-shadow: 0 0 0 1px #c9cbd1, 0 40px 80px rgba(10, 10, 11, 0.32);
+  }
+  .bar { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; background: #1b1b1e; }
+  .bar i { width: 11px; height: 11px; border-radius: 50%; background: #45454b; }
+  .bar span { margin: 0 auto; padding: 4px 60px; border-radius: 6px; background: #2a2a2f; font: 500 13px/1.4 "JetBrains Mono", monospace; letter-spacing: 0.02em; color: #a3a3ab; }
+  .screen { width: 1296px; height: 810px; overflow: hidden; }
+  iframe { display: block; width: 1440px; height: 900px; border: 0; transform: scale(0.9); transform-origin: 0 0; }
+  p { margin: 0; font: 500 12px/1 "JetBrains Mono", monospace; letter-spacing: 0.16em; text-transform: uppercase; color: #6b6d75; }
+</style>
+</head>
+<body>
+  <h1 id="title"></h1>
+  <div class="window">
+    <div class="bar"><i></i><i></i><i></i><span>talia.ar</span></div>
+    <div class="screen"><iframe id="screen" title="Pantalla"></iframe></div>
+  </div>
+  <p>Propuesta de diseño · Mateo Quadrelli</p>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const [plain, accent = ""] = (params.get("t") || "").split("*");
+    const title = document.getElementById("title");
+    title.textContent = plain;
+    if (accent) title.append(Object.assign(document.createElement("em"), { textContent: accent }));
+    document.getElementById("screen").src = "../index.html?" + (params.get("q") || "captura");
+  </script>
+</body>
+</html>
